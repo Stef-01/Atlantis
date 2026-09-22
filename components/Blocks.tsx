@@ -5,7 +5,7 @@ import VideoEmbed from "./VideoEmbed";
 import type { Block } from "@/content/pages";
 
 // Facility photos used when a feature card has no image of its own.
-const pool = ["/images/tech-12.jpg", "/images/gym-1.jpg", "/images/tech-18.jpg", "/images/hydrotherapy.jpg", "/images/reaxing.jpg", "/images/about.jpg"];
+const pool = ["/images/cardio-deck.jpg", "/images/reax-run-console.jpg", "/images/reaxing-light-wall.jpg", "/images/aquatread-session.jpg", "/images/reaxing-wall-in-use.jpg", "/images/arc-dumbbells-closeup.jpg"];
 
 export function SplitBlock({ b }: { b: Extract<Block, { type: "split" }> }) {
   return (

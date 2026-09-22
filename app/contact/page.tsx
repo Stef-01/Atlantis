@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <>
       <PhotoHero
-        image="/images/ocean.jpg"
+        image="/images/underwater.jpg"
         eyebrow="Contact"
         title="Let's start the conversation."
         sub="Leave your details for a phone or face-to-face consult within 7 days. NDIS, private patients and referrals welcome."

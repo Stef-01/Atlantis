@@ -20,28 +20,28 @@ const steps = [
     title: "Reach out and share your goals.",
     body: "Tell us what's brought you in: pain, injury, mental health or performance. We match you with the right discipline, or a combined team. No referral required.",
     points: ["Phone or face-to-face consult within 7 days", "Medicare, NDIS, DVA, Workcover and private health", "No referral required to get started"],
-    image: "/images/team-sport.jpg",
+    image: "/images/team-sport-slogan.jpg",
   },
   {
     step: "02 · Assess",
     title: "Meet your practitioner.",
     body: "A thorough assessment of your history, goals and current function, with complete body scans for precise, objective baselines.",
     points: ["Objective baselines from advanced technology", "A plan tailored to your condition, not a generic program", "Combined care where it helps"],
-    image: "/images/chronic-pain.jpg",
+    image: "/images/aquatread-control-panel.jpg",
   },
   {
     step: "03 · Treat",
     title: "Begin your program.",
     body: "Activity-based psychotherapy, Aquatread hydrotherapy, infrared sauna, REAXING lights and treadmill. Sessions coordinated across disciplines.",
     points: ["Australia's only Aquatread underwater treadmill", "Cognitive and proprioceptive training", "Movement-based psychology"],
-    image: "/images/tech-17.jpg",
+    image: "/images/infrared-sauna.jpg",
   },
   {
     step: "04 · Track",
     title: "Progress, measured.",
     body: "Outcome-driven tracking so you can see real progress over time, with milestone updates and plans adjusted as your results come in.",
     points: ["Milestone body scans", "Plans adjusted as results come in", "Clear next steps at every stage"],
-    image: "/images/tech-18.jpg",
+    image: "/images/reaxing-light-wall.jpg",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Home() {
     <>
       <PhotoHero
         tall
-        image="/images/home-hero.jpg"
+        image="/images/beach.jpg"
         eyebrow="Bundall, Gold Coast"
         title="The new home for your recovery."
         sub="Psychology, physiotherapy, exercise physiology and hydrotherapy, in one purpose-built centre."
@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      <TextureBand image="/images/physiotherapy.jpg" quote="When you're in pain, waiting for care is not an option." attribution="Our commitment to you" />
+      <TextureBand image="/images/beach-aerial.jpg" quote="When you're in pain, waiting for care is not an option." attribution="Our commitment to you" />
 
       <div className="relative z-10 bg-white rounded-t-hero">
         {/* Patient / referrer split */}

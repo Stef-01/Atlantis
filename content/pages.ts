@@ -29,7 +29,7 @@ const commitment: Block = {
   eyebrow: "Our commitment to you",
   heading: "When you are in pain, waiting for care is simply not an option.",
   body: [commitmentCopy, "Leave your details for a phone or face to face consult within 7 days from Atlantis RC."],
-  image: "/images/gym-2.jpg",
+  image: "/images/reaxing-treadmill.jpg",
   cta: { label: "Get in touch", href: "/contact" },
 };
 
@@ -39,7 +39,7 @@ const fundingList: Block = {
   heading: "Pay privately, or use the funding you already have.",
   intro: "Our clients can pay privately or utilise DVA, NDIS, private health funds, Workcover or GP referred Mental Health Care Plans or EPC plans while receiving the highest level of treatment.",
   items: ["Medicare", "NDIS", "DVA", "Workcover", "Private Health", "Fee For Service"],
-  image: "/images/about-bg.jpg",
+  image: "/images/treadmill-console.jpg",
 };
 
 const whoIsArcFor: Block = {
@@ -47,9 +47,9 @@ const whoIsArcFor: Block = {
   eyebrow: "Who is ARC for?",
   heading: "Unique allied health care featuring.",
   items: [
-    { title: "Whole-person care", body: "Comprehensive care that addresses both physical and psychological needs at once.", image: "/images/lifestyle.jpg" },
-    { title: "Advanced technology", body: "Access to Australia's only Hydro Tread underwater treadmill system, plus the REAXING wall and treadmill.", image: "/images/tech-17.jpg" },
-    { title: "Progress tracking", body: "Evidence-based programs backed by precise progress tracking.", image: "/images/chronic-pain.jpg" },
+    { title: "Whole-person care", body: "Comprehensive care that addresses both physical and psychological needs at once.", image: "/images/bart-traynor-selfie.jpg" },
+    { title: "Advanced technology", body: "Access to Australia's only Hydro Tread underwater treadmill system, plus the REAXING wall and treadmill.", image: "/images/infrared-sauna.jpg" },
+    { title: "Progress tracking", body: "Evidence-based programs backed by precise progress tracking.", image: "/images/aquatread-control-panel.jpg" },
   ],
 };
 
@@ -59,10 +59,10 @@ export const serviceCards: Extract<Block, { type: "cards" }> = {
   heading: "Choose your service.",
   intro: "Choose your service below or explore to learn more about Atlantis RC.",
   items: [
-    { title: "Physiotherapy", body: "Helping you move better, reduce pain and regain confidence in your body.", href: "/physiotherapy", image: "/images/chronic-pain.jpg" },
-    { title: "Psychology", body: "We don't just talk about problems, we move through them.", href: "/psychology", image: "/images/psychology.jpg" },
-    { title: "Exercise Physiology", body: "Exercise is a powerful tool for recovery, for physical injuries and mental health.", href: "/exercise-physiology", image: "/images/exercise-physiology.jpg" },
-    { title: "Hydrotherapy", body: "The only Aquatread Hydrotherapy treadmill in Australia.", href: "/hydrotherapy", image: "/images/tech-17.jpg" },
+    { title: "Physiotherapy", body: "Helping you move better, reduce pain and regain confidence in your body.", href: "/physiotherapy", image: "/images/aquatread-control-panel.jpg" },
+    { title: "Psychology", body: "We don't just talk about problems, we move through them.", href: "/psychology", image: "/images/helping-hand-silhouette.jpg" },
+    { title: "Exercise Physiology", body: "Exercise is a powerful tool for recovery, for physical injuries and mental health.", href: "/exercise-physiology", image: "/images/reaxing-treadmill-closeup.jpg" },
+    { title: "Hydrotherapy", body: "The only Aquatread Hydrotherapy treadmill in Australia.", href: "/hydrotherapy", image: "/images/infrared-sauna.jpg" },
   ],
 };
 
@@ -71,9 +71,9 @@ export const technologyCards: Extract<Block, { type: "cards" }> = {
   eyebrow: "ARC's technology",
   heading: "A complete suite of advanced technologies unparalleled elsewhere in Australia.",
   items: [
-    { title: "Aquatread", body: "A state-of-the-art, custom-made underwater treadmill that is truly unique in Australia.", href: "/aquatred", image: "/images/aquatred.jpg" },
-    { title: "REAXING Light Wall", body: "An exclusive interactive training device that redefines physical and cognitive capabilities.", href: "/reaxing-light-wall", image: "/images/tech-18.jpg" },
-    { title: "REAXING Treadmill", body: "Sudden and unpredictable inclinations in all directions. Unpredictable training for unmatched results.", href: "/reaxing-treadmill", image: "/images/exercise-physiology.jpg" },
+    { title: "Aquatread", body: "A state-of-the-art, custom-made underwater treadmill that is truly unique in Australia.", href: "/aquatred", image: "/images/aquatread-session.jpg" },
+    { title: "REAXING Light Wall", body: "An exclusive interactive training device that redefines physical and cognitive capabilities.", href: "/reaxing-light-wall", image: "/images/reaxing-light-wall.jpg" },
+    { title: "REAXING Treadmill", body: "Sudden and unpredictable inclinations in all directions. Unpredictable training for unmatched results.", href: "/reaxing-treadmill", image: "/images/reaxing-treadmill-closeup.jpg" },
   ],
 };
 
@@ -82,12 +82,12 @@ const conditionCards: Block = {
   eyebrow: "What we treat",
   heading: "Where would you like support?",
   items: [
-    { title: "Mental Health", body: "Anxiety, depression, ADHD, PTSD, phobias and OCD.", href: "/mental-health", image: "/images/lifestyle.jpg" },
-    { title: "Chronic Pain & Disorders", body: "Moving beyond temporary fixes to long-term relief.", href: "/chronic-pain-and-disorders", image: "/images/about.jpg" },
-    { title: "Physical Rehabilitation", body: "Return to full function, strength and mobility.", href: "/physical-rehabilitation", image: "/images/hydrotherapy.jpg" },
-    { title: "Neurological & Cognitive", body: "Rebuilding lost connections and reclaiming independence.", href: "/neurological-and-cognitive", image: "/images/tech-18.jpg" },
-    { title: "Lifestyle Conditions", body: "A proactive and empowering approach to health.", href: "/lifestyle-conditions", image: "/images/lifestyle-2.jpg" },
-    { title: "ADHD Program", body: "The ADHD Blueprint: a 6-week adult 1:1 treatment.", href: "/adhd-program", image: "/images/reaxing.jpg" },
+    { title: "Mental Health", body: "Anxiety, depression, ADHD, PTSD, phobias and OCD.", href: "/mental-health", image: "/images/bart-traynor-selfie.jpg" },
+    { title: "Chronic Pain & Disorders", body: "Moving beyond temporary fixes to long-term relief.", href: "/chronic-pain-and-disorders", image: "/images/arc-dumbbells-closeup.jpg" },
+    { title: "Physical Rehabilitation", body: "Return to full function, strength and mobility.", href: "/physical-rehabilitation", image: "/images/aquatread-session.jpg" },
+    { title: "Neurological & Cognitive", body: "Rebuilding lost connections and reclaiming independence.", href: "/neurological-and-cognitive", image: "/images/reaxing-light-wall.jpg" },
+    { title: "Lifestyle Conditions", body: "A proactive and empowering approach to health.", href: "/lifestyle-conditions", image: "/images/gym-floor-session.jpg" },
+    { title: "ADHD Program", body: "The ADHD Blueprint: a 6-week adult 1:1 treatment.", href: "/adhd-program", image: "/images/reaxing-wall-in-use.jpg" },
   ],
 };
 
@@ -118,7 +118,7 @@ const techList: Block = {
     { title: "REAXING Treadmill", body: "Provides sudden and unpredictable inclinations in all directions while walking or running with dynamic interferences, for training and movement improvement purposes." },
     { title: "And More", body: "We continuously invest in advanced technologies to provide our patients with the best possible care." },
   ],
-  image: "/images/tech-12.jpg",
+  image: "/images/cardio-deck.jpg",
 };
 
 export const pages: SubPage[] = [
@@ -129,7 +129,7 @@ export const pages: SubPage[] = [
     eyebrow: "About Atlantis RC",
     headline: "Gold Coast's integrated allied health centre.",
     sub: "Psychology, physiotherapy, exercise physiology and hydrotherapy, in a purpose-built facility in Bundall on the Gold Coast.",
-    image: "/images/squad.jpg",
+    image: "/images/arc-dumbbell-gym.jpg",
     chips: ["Purpose-built facility", "Integrated care", "Bundall, Gold Coast"],
     blocks: [
       {
@@ -140,7 +140,7 @@ export const pages: SubPage[] = [
           "Atlantis Recovery Centre is a multidisciplinary allied-health centre in Bundall on the Gold Coast, providing psychology, physiotherapy, exercise physiology and hydrotherapy. Atlantis RC partners innovation with world-leading technology and specialist clinicians to deliver integrated, layered recovery programs. Our integrated approach ensures a compassionate focus on the recovery journey of the human at the core of our work.",
           "Integrating with DVA, NDIS and health providers, Atlantis RC has created a purpose-built facility that offers in-house physiotherapy, exercise physiology, and psychology clinical services, alongside breakthrough technology. Atlantis RC provides use of Aqua tread hydrotherapy, proprioceptive and cognitive training through the REAX wall and treadmill, and infrared sauna to provide the full-spectrum of care and recovery.",
         ],
-        image: "/images/portrait-1.jpg",
+        image: "/images/poseidon-mural-dog.jpg",
       },
       fundingList,
       {
@@ -153,7 +153,7 @@ export const pages: SubPage[] = [
           { title: "How do I get a referral?", body: "You will need to visit a doctor to get a referral. If you don't have a regular GP, we are happy to help you find out what you need and point you in the right direction." },
           { title: "Is it expensive?", body: "While we have some of the most unique equipment in Australia, we are priced to allow anyone to come and see us." },
         ],
-        image: "/images/team-photo.jpg",
+        image: "/images/jade-evans-profile.jpg",
       },
       arcVideo,
       commitment,
@@ -166,7 +166,7 @@ export const pages: SubPage[] = [
     eyebrow: "Services",
     headline: "Your path to peak potential.",
     sub: "At Atlantis RC, a leading recovery centre on the Gold Coast, we're dedicated to helping you achieve your fullest potential.",
-    image: "/images/tech-12.jpg",
+    image: "/images/cardio-deck.jpg",
     chips: ["Physiotherapy", "Psychology", "Exercise physiology", "Hydrotherapy"],
     blocks: [
       {
@@ -177,7 +177,7 @@ export const pages: SubPage[] = [
           "Whatever your personal goals, our comprehensive range of services is designed to support you every step of the way. Whether you're keen to recover from a physical or psychological injury, unlock new levels in your sporting or office performance, or perhaps your focus is simply to become the best version of yourself, the squad at Atlantis RC has you covered.",
           "We've created a purpose-built holistic health centre where physical rehabilitation and mental wellness converge to deliver powerful and lasting results. You can access all your Allied Health care needs under one roof, guided by an expert team using world-class technology you won't find anywhere else in Australia.",
         ],
-        image: "/images/gym-1.jpg",
+        image: "/images/reax-run-console.jpg",
       },
       serviceCards,
       {
@@ -185,9 +185,9 @@ export const pages: SubPage[] = [
         eyebrow: "What you get",
         heading: "Discover how our tailored services can help you recover, perform, and thrive.",
         items: [
-          { title: "Comprehensive care", body: "Comprehensive care that addresses both physical and psychological needs at once.", image: "/images/lifestyle.jpg" },
-          { title: "Advanced equipment", body: "Access to advanced equipment and therapies.", image: "/images/tech-17.jpg" },
-          { title: "Evidence-based programs", body: "Evidence-based programs backed by precise progress tracking.", image: "/images/chronic-pain.jpg" },
+          { title: "Comprehensive care", body: "Comprehensive care that addresses both physical and psychological needs at once.", image: "/images/bart-traynor-selfie.jpg" },
+          { title: "Advanced equipment", body: "Access to advanced equipment and therapies.", image: "/images/infrared-sauna.jpg" },
+          { title: "Evidence-based programs", body: "Evidence-based programs backed by precise progress tracking.", image: "/images/aquatread-control-panel.jpg" },
         ],
       },
       conditionCards,
@@ -202,7 +202,7 @@ export const pages: SubPage[] = [
     eyebrow: "Physiotherapy",
     headline: "Physio the Atlantis RC way.",
     sub: "At Atlantis Recovery Centre, our physiotherapy service is focused on helping you move better, reduce pain and regain confidence in your body.",
-    image: "/images/chronic-pain.jpg",
+    image: "/images/aquatread-control-panel.jpg",
     chips: ["Accepting referrals now", "Aquatread & infrared", "Milestone updates"],
     blocks: [
       {
@@ -214,7 +214,7 @@ export const pages: SubPage[] = [
           "As part of our multidisciplinary allied health team in Bundall on the Gold Coast, our physiotherapists can also work alongside psychology and exercise physiology when a more integrated approach to recovery is beneficial.",
           "Whether you are recovering from injury, managing ongoing pain or working towards improved strength, mobility and function, our goal is to help you return to the activities that matter most.",
         ],
-        image: "/images/hydrotherapy.jpg",
+        image: "/images/aquatread-session.jpg",
       },
       {
         type: "features",
@@ -222,12 +222,12 @@ export const pages: SubPage[] = [
         heading: "Layering face-to-face treatment with state-of-the-art equipment.",
         intro: "With full access to all of our leading technology as standard, you will benefit from innovative treatment options only available to Atlantis RC.",
         items: [
-          { title: "Aquatread / Infrared Treatments", body: "Utilising the Aquatread, our team can manage your weight-bearing to enable movements not possible on land. Combined with our infrared sauna, your treatment is smooth-sailing.", image: "/images/tech-17.jpg" },
-          { title: "Milestone Updates & More", body: "Our team will conduct complete body scans to provide you with milestone updates and track your progress, integrating this data into your treatment plans.", image: "/images/chronic-pain.jpg" },
-          { title: "Specialised", body: "Specialist in-house physiotherapists with extensive experience treating everyday, DVA, and NDIS clients.", image: "/images/hydrotherapy.jpg" },
-          { title: "Reducing Pain", body: "Our staff specialise in reducing pain symptoms, and increasing mobility, to improve your quality of life and rediscover your independence.", image: "/images/gym-2.jpg" },
-          { title: "Making Treatment Fun", body: "The ARC team layers face-to-face treatment with hydro therapy, our REAXING treadmill or REAXING wall and so much more in your sessions, giving you greater treatment flexibility, availability and consistency.", image: "/images/tech-18.jpg" },
-          { title: "Accepting Referrals Now", body: "Atlantis RC are welcoming patients now. Read our commitment to you.", image: "/images/team-sport.jpg" },
+          { title: "Aquatread / Infrared Treatments", body: "Utilising the Aquatread, our team can manage your weight-bearing to enable movements not possible on land. Combined with our infrared sauna, your treatment is smooth-sailing.", image: "/images/infrared-sauna.jpg" },
+          { title: "Milestone Updates & More", body: "Our team will conduct complete body scans to provide you with milestone updates and track your progress, integrating this data into your treatment plans.", image: "/images/aquatread-control-panel.jpg" },
+          { title: "Specialised", body: "Specialist in-house physiotherapists with extensive experience treating everyday, DVA, and NDIS clients.", image: "/images/aquatread-session.jpg" },
+          { title: "Reducing Pain", body: "Our staff specialise in reducing pain symptoms, and increasing mobility, to improve your quality of life and rediscover your independence.", image: "/images/reaxing-treadmill.jpg" },
+          { title: "Making Treatment Fun", body: "The ARC team layers face-to-face treatment with hydro therapy, our REAXING treadmill or REAXING wall and so much more in your sessions, giving you greater treatment flexibility, availability and consistency.", image: "/images/reaxing-light-wall.jpg" },
+          { title: "Accepting Referrals Now", body: "Atlantis RC are welcoming patients now. Read our commitment to you.", image: "/images/team-sport-slogan.jpg" },
         ],
       },
       whoIsArcFor,
@@ -239,7 +239,7 @@ export const pages: SubPage[] = [
           "Living on the Gold Coast means embracing an active lifestyle filled with surfing, sports, and outdoor adventures. When pain or injury threatens to sideline your quality of life, accessing expert physiotherapy services becomes essential for getting back to what you love most. The Gold Coast has established itself as a premier destination for comprehensive physiotherapy care, combining world-class expertise with a deep understanding of the local community's unique health and wellness needs.",
           "With over 600,000 residents leading increasingly active lives, the demand for exceptional physiotherapy services has driven the development of some of Australia's most advanced treatment facilities. From elite athletes recovering from sports injuries to families seeking pediatric care, and NDIS participants requiring specialised support, Gold Coast physiotherapists deliver personalised treatment plans that achieve optimal health outcomes for every individual.",
         ],
-        image: "/images/physiotherapy.jpg",
+        image: "/images/beach-aerial.jpg",
       },
       fundingList,
       commitment,
@@ -252,7 +252,7 @@ export const pages: SubPage[] = [
     eyebrow: "Psychology",
     headline: "We don't just talk about problems. We move through them.",
     sub: "Our psychology team blends evidence-based therapy with innovative movement-based approaches, using advanced neuro-reactive tools like REAXING Lights, REAX Run proprioceptive treadmills, and real-time cognitive-motor training.",
-    image: "/images/psychology.jpg",
+    image: "/images/helping-hand-silhouette.jpg",
     chips: ["Functional psychology", "Activity-based psychotherapy", "Teens and adults"],
     blocks: [
       {
@@ -260,10 +260,10 @@ export const pages: SubPage[] = [
         eyebrow: "How we're different",
         heading: "Therapy that combines mind and body for better results.",
         items: [
-          { title: "Mind and body", body: "Therapy that combines mind and body for better results.", image: "/images/lifestyle.jpg" },
-          { title: "Action-oriented", body: "Action-oriented sessions for clients who struggle with talk therapy.", image: "/images/reaxing.jpg" },
-          { title: "Personalised programs", body: "Personalised programs for ADHD, anxiety, trauma, and more.", image: "/images/tech-18.jpg" },
-          { title: "Functional goals", body: "Functional goals that improve daily life and wellbeing.", image: "/images/team-sport.jpg" },
+          { title: "Mind and body", body: "Therapy that combines mind and body for better results.", image: "/images/bart-traynor-selfie.jpg" },
+          { title: "Action-oriented", body: "Action-oriented sessions for clients who struggle with talk therapy.", image: "/images/reaxing-wall-in-use.jpg" },
+          { title: "Personalised programs", body: "Personalised programs for ADHD, anxiety, trauma, and more.", image: "/images/reaxing-light-wall.jpg" },
+          { title: "Functional goals", body: "Functional goals that improve daily life and wellbeing.", image: "/images/team-sport-slogan.jpg" },
         ],
       },
       {
@@ -282,14 +282,14 @@ export const pages: SubPage[] = [
           "Activity-based psychotherapy brings therapy to life, combining talk therapy with movement, body-based tasks, and sensory activities. This helps clients who struggle with traditional therapy by making sessions more interactive, grounded, and results-driven.",
           "We use tools like reactive lighting walls, cognitive-motor drills, breath-regulation tasks, and cardio equipment to support mental fitness, emotional resilience and nervous system balance. This hybrid model is ideal for ADHD, anxiety, trauma, and anyone ready to move beyond talking and into transformation.",
         ],
-        image: "/images/reaxing-wall.jpg",
+        image: "/images/reaxing-wall-clinician-client.jpg",
       },
       {
         type: "list",
         eyebrow: "What we help with",
         heading: "Our psychologists work with teens and adults to address a wide range of mental health and performance issues.",
         items: ["Anxiety and panic disorders", "Depression and low motivation", "ADHD and focus difficulties", "Trauma and PTSD", "Chronic stress and burnout", "Emotional regulation and executive functioning", "Low confidence, self-esteem, and goal setting"],
-        image: "/images/lifestyle.jpg",
+        image: "/images/bart-traynor-selfie.jpg",
       },
       {
         type: "split",
@@ -300,7 +300,7 @@ export const pages: SubPage[] = [
           "At Atlantis RC, we understand that true recovery and peak performance encompass both physical and mental well-being. Our experienced psychologists provide a safe and confidential space to address a range of concerns, helping you to develop resilience, manage stress, improve cognitive function, and cultivate a positive mindset. Through evidence-based practices and a compassionate approach, our Psychology team works collaboratively with our other Allied Health professionals to ensure a truly holistic recovery and performance pathway.",
           "If you're ready for a more engaging, effective, and empowering approach to therapy, get in touch today.",
         ],
-        image: "/images/psychology-2.jpg",
+        image: "/images/psychology-collage.jpg",
         cta: { label: "Get in touch", href: "/contact" },
       },
       fundingList,
@@ -314,7 +314,7 @@ export const pages: SubPage[] = [
     eyebrow: "Exercise Physiology",
     headline: "Integrating physical and mental wellness.",
     sub: "At Atlantis Recovery Centre, Exercise Physiology is an integral component of our comprehensive treatment approach, offering numerous benefits to individuals seeking physical recovery and recovery from mental health disorders.",
-    image: "/images/exercise-physiology.jpg",
+    image: "/images/reaxing-treadmill-closeup.jpg",
     chips: ["Tailored programs", "Low wait times", "Physical and mental recovery"],
     blocks: [
       {
@@ -322,10 +322,10 @@ export const pages: SubPage[] = [
         eyebrow: "Our programs are tailored to",
         heading: "Exercise is a powerful tool for recovery, not just for physical injuries but also for mental health.",
         items: [
-          { title: "Boost Mood and Reduce Stress", body: "By promoting the release of endorphins, exercise naturally elevates mood, reduces anxiety, and helps combat depression, while also fostering self-esteem and a positive body image.", image: "/images/lifestyle.jpg" },
-          { title: "Restore Physical Vitality", body: "We focus on regaining strength, stamina, cardiovascular health, muscle tone, and overall vitality, crucial for both daily life and peak performance.", image: "/images/gym-1.jpg" },
-          { title: "Develop Coping Skills", body: "Physical activity serves as an effective stress reduction technique, helping you build resilience and develop valuable coping mechanisms.", image: "/images/about.jpg" },
-          { title: "Enhance Cognitive Function", body: "Exercise stimulates neuroplasticity, positively impacting cognitive function, memory, and concentration.", image: "/images/tech-18.jpg" },
+          { title: "Boost Mood and Reduce Stress", body: "By promoting the release of endorphins, exercise naturally elevates mood, reduces anxiety, and helps combat depression, while also fostering self-esteem and a positive body image.", image: "/images/bart-traynor-selfie.jpg" },
+          { title: "Restore Physical Vitality", body: "We focus on regaining strength, stamina, cardiovascular health, muscle tone, and overall vitality, crucial for both daily life and peak performance.", image: "/images/reax-run-console.jpg" },
+          { title: "Develop Coping Skills", body: "Physical activity serves as an effective stress reduction technique, helping you build resilience and develop valuable coping mechanisms.", image: "/images/arc-dumbbells-closeup.jpg" },
+          { title: "Enhance Cognitive Function", body: "Exercise stimulates neuroplasticity, positively impacting cognitive function, memory, and concentration.", image: "/images/reaxing-light-wall.jpg" },
         ],
       },
       {
@@ -343,7 +343,7 @@ export const pages: SubPage[] = [
           "Our expert team is ready to help you rebuild your strength, restore your vitality, and take control of your health. We are committed to servicing new clients quickly and have low wait times, ensuring you can start your journey to recovery as soon as possible.",
           "Reach out to us today to book a callback with one of our expert team members. Let's start the conversation about your path to recovery.",
         ],
-        image: "/images/gym-2.jpg",
+        image: "/images/reaxing-treadmill.jpg",
         cta: { label: "Book a callback", href: "/contact" },
       },
       fundingList,
@@ -356,7 +356,7 @@ export const pages: SubPage[] = [
     eyebrow: "Hydrotherapy",
     headline: "Hydrotread at Atlantis RC.",
     sub: "This custom-made underwater treadmill is the only Aquatread Hydrotherapy treadmill in Australia, providing a uniquely effective and low-impact environment for rehabilitation and training.",
-    image: "/images/tech-17.jpg",
+    image: "/images/infrared-sauna.jpg",
     chips: ["Only one in Australia", "Low-impact", "All abilities"],
     blocks: [
       {
@@ -364,10 +364,10 @@ export const pages: SubPage[] = [
         eyebrow: "Experience the benefits of advanced hydrotherapy",
         heading: "The Hydrotread revolutionises the way you recover and build strength.",
         items: [
-          { title: "Reduced Weight-Bearing", body: "The buoyancy of water significantly lessens the impact on your joints, allowing for pain-free movement, running, walking, and jumping, even during early stages of recovery.", image: "/images/hydrotherapy.jpg" },
-          { title: "Enhanced Mobility and Coordination", body: "The water's natural resistance provides a gentle yet effective way to improve your range of motion, balance, and coordination.", image: "/images/physical-rehab.jpg" },
-          { title: "Increased Strength and Endurance", body: "Engage more muscles with less strain, building cardiovascular fitness, strength, and endurance efficiently.", image: "/images/aquatred.jpg" },
-          { title: "Suitable for All Abilities", body: "From professional athletes seeking performance enhancement to individuals recovering from injuries or living with disabilities, the Hydrotread is adaptable to every fitness level and condition.", image: "/images/tech-11.jpg" },
+          { title: "Reduced Weight-Bearing", body: "The buoyancy of water significantly lessens the impact on your joints, allowing for pain-free movement, running, walking, and jumping, even during early stages of recovery.", image: "/images/aquatread-session.jpg" },
+          { title: "Enhanced Mobility and Coordination", body: "The water's natural resistance provides a gentle yet effective way to improve your range of motion, balance, and coordination.", image: "/images/aquatread-session-rings.jpg" },
+          { title: "Increased Strength and Endurance", body: "Engage more muscles with less strain, building cardiovascular fitness, strength, and endurance efficiently.", image: "/images/aquatread-session.jpg" },
+          { title: "Suitable for All Abilities", body: "From professional athletes seeking performance enhancement to individuals recovering from injuries or living with disabilities, the Hydrotread is adaptable to every fitness level and condition.", image: "/images/dumbbell-rack.jpg" },
         ],
       },
       {
@@ -382,7 +382,7 @@ export const pages: SubPage[] = [
         eyebrow: "Ideal for diverse conditions",
         heading: "Start your journey with Atlantis RC today.",
         body: ["Whether you're rehabilitating from surgery, managing chronic pain, or looking to improve athletic performance, our Hydrotread offers a safe and highly effective solution."],
-        image: "/images/tech-14.jpg",
+        image: "/images/gym-floor.jpg",
         cta: { label: "Learn more about the Aquatread", href: "/aquatred" },
       },
       commitment,
@@ -395,7 +395,7 @@ export const pages: SubPage[] = [
     eyebrow: "What we treat",
     headline: "Treating mental health at Atlantis Recovery Centre.",
     sub: "At Atlantis RC, we believe in a holistic approach to healing and wellness. True recovery involves addressing both the physical and mental aspects of your health, as they are deeply interconnected.",
-    image: "/images/lifestyle.jpg",
+    image: "/images/bart-traynor-selfie.jpg",
     chips: ["Anxiety", "Depression", "ADHD", "PTSD", "Phobias", "OCD"],
     blocks: [
       {
@@ -406,9 +406,9 @@ export const pages: SubPage[] = [
           "We integrate cutting-edge physical and mental therapies to deliver a more profound and sustainable outcome for our patients. We know that mental health challenges can manifest physically, and physical ailments can take a toll on your mental state. By treating the whole person, we can break this cycle and help you find a path to true recovery.",
           "For those struggling with mental health, our holistic approach can be particularly beneficial. We offer a supportive environment where you can explore and process your emotions while simultaneously engaging in physical therapies that can alleviate stress, improve mood, and boost overall energy. This integrated method helps to re-establish the mind-body connection, fostering resilience and a renewed sense of hope.",
         ],
-        image: "/images/reaxing.jpg",
+        image: "/images/reaxing-wall-in-use.jpg",
       },
-      { type: "list", eyebrow: "What we help with", heading: "A comprehensive and personalised treatment plan that empowers you to achieve lasting well-being.", items: ["Anxiety", "Depression", "ADHD", "PTSD", "Phobias", "OCD"], image: "/images/mental-health.jpg" },
+      { type: "list", eyebrow: "What we help with", heading: "A comprehensive and personalised treatment plan that empowers you to achieve lasting well-being.", items: ["Anxiety", "Depression", "ADHD", "PTSD", "Phobias", "OCD"], image: "/images/atlantis-collage-tall.jpg" },
       techList,
       whoIsArcFor,
       fundingList,
@@ -422,7 +422,7 @@ export const pages: SubPage[] = [
     eyebrow: "What we treat",
     headline: "Treatment of chronic pain and disorders.",
     sub: "Chronic pain is more than just a physical sensation; it's a complex and often debilitating condition that can impact every aspect of your life.",
-    image: "/images/about.jpg",
+    image: "/images/arc-dumbbells-closeup.jpg",
     chips: ["Long-term relief", "Holistic care", "Gold Coast"],
     blocks: [
       {
@@ -434,7 +434,7 @@ export const pages: SubPage[] = [
           "Chronic pain is typically defined as any pain that lasts for more than three to six months, or beyond the expected healing time of an injury or illness. Unlike acute pain, which is a signal of immediate harm, chronic pain often persists long after the initial cause has resolved. This can be due to a variety of factors, including nerve damage, inflammation, or a complex interplay between physical and psychological components. The constant presence of pain can lead to a cascade of other issues, such as sleep disturbances, anxiety, depression, and reduced mobility.",
           "The impact of chronic pain extends far beyond the physical. It can erode your ability to work, socialise, and engage in hobbies you once loved. It can strain relationships, leading to feelings of isolation and frustration. At Atlantis RC, we believe that true recovery requires addressing all of these facets: the physical, mental, and emotional.",
         ],
-        image: "/images/lifestyle-2.jpg",
+        image: "/images/gym-floor-session.jpg",
       },
       {
         type: "details",
@@ -452,7 +452,7 @@ export const pages: SubPage[] = [
           { title: "Neuropathic Pain", body: "Pain caused by nerve damage, we use advanced techniques to help manage symptoms and improve nerve function." },
           { title: "Temporomandibular Joint (TMJ) Disorders", body: "Our team provides targeted care to relieve jaw pain and improve function." },
         ],
-        image: "/images/gym-1.jpg",
+        image: "/images/reax-run-console.jpg",
       },
       serviceCards,
       commitment,
@@ -465,7 +465,7 @@ export const pages: SubPage[] = [
     eyebrow: "What we treat",
     headline: "Physical rehabilitation and restorative care.",
     sub: "Returning to a life of full function, strength, and mobility after an injury, surgery, or due to a long-standing condition is the goal of physical rehabilitation.",
-    image: "/images/hydrotherapy.jpg",
+    image: "/images/aquatread-session.jpg",
     chips: ["Post-surgical recovery", "Sports injuries", "Joint replacement"],
     blocks: [
       {
@@ -476,7 +476,7 @@ export const pages: SubPage[] = [
           "At Atlantis Recovery Centre, we are dedicated to helping you achieve this goal, providing a comprehensive and supportive environment for your recovery. Our purpose-built facility on the Gold Coast is where state-of-the-art technology meets expert care, guiding you through a personalised journey to restore your body's potential and rediscover your active life.",
           "Our philosophy is built on the understanding that effective physical rehabilitation requires a holistic approach. We don't just focus on the injured area; we treat the entire person, addressing both the physical and mental aspects of recovery. Our multidisciplinary team of Physiotherapists, Exercise Physiologists, and other allied health professionals works collaboratively to design a tailored treatment plan that is as unique as you are. This integrated approach ensures that every facet of your rehabilitation is considered, leading to more robust and lasting results.",
         ],
-        image: "/images/gym-2.jpg",
+        image: "/images/reaxing-treadmill.jpg",
       },
       {
         type: "details",
@@ -491,7 +491,7 @@ export const pages: SubPage[] = [
           { title: "Balance Disorders", body: "Through specialised exercises and technologies like our VR system, we help you improve stability and reduce your risk of falls." },
           { title: "Tendonitis", body: "We provide targeted treatments to reduce inflammation and pain in affected tendons, helping to restore function." },
         ],
-        image: "/images/physical-rehab.jpg",
+        image: "/images/aquatread-session-rings.jpg",
       },
       serviceCards,
       commitment,
@@ -504,7 +504,7 @@ export const pages: SubPage[] = [
     eyebrow: "What we treat",
     headline: "Rebuilding connections at Atlantis RC.",
     sub: "Neurological and cognitive conditions can disrupt the very essence of how we move, think, and interact with the world. We help individuals with these challenges rebuild lost connections and reclaim their independence.",
-    image: "/images/tech-18.jpg",
+    image: "/images/reaxing-light-wall.jpg",
     chips: ["Neuroplasticity", "Stroke recovery", "Atlantis VR"],
     blocks: [
       {
@@ -514,7 +514,7 @@ export const pages: SubPage[] = [
         body: [
           "Our philosophy is rooted in the principle of neuroplasticity: the brain's ability to reorganise itself by forming new neural connections throughout life. Our multidisciplinary team, including Physiotherapists, Exercise Physiologists, and Psychologists, collaborates to create comprehensive and individualised treatment plans. We go beyond addressing a single symptom, focusing on integrated therapies that stimulate the nervous system and promote cognitive and physical recovery. This holistic approach ensures that all aspects of a neurological or cognitive condition are addressed, leading to more meaningful and lasting improvements.",
         ],
-        image: "/images/allied.jpg",
+        image: "/images/atlantis-collage-wide.jpg",
       },
       {
         type: "details",
@@ -529,17 +529,17 @@ export const pages: SubPage[] = [
           { title: "Parkinson's Disease", body: "We provide specialised programs to help manage motor symptoms and maintain independence." },
           { title: "Dementia and Cognitive Decline", body: "We offer therapies to help slow cognitive decline and improve daily function." },
         ],
-        image: "/images/neuro.jpg",
+        image: "/images/vr-headset.jpg",
       },
       {
         type: "features",
         eyebrow: "Our specialised therapies",
         heading: "Innovative therapies and technologies, many exclusive to Atlantis Recovery Centre.",
         items: [
-          { title: "Physiotherapy", body: "Our physiotherapists are skilled in neurorehabilitation, designing programs to improve balance, coordination, gait, and motor control. For conditions like stroke recovery and multiple sclerosis (MS), they use specific exercises to retrain movement patterns and build strength.", image: "/images/chronic-pain.jpg" },
-          { title: "Virtual Reality (VR) Therapy", body: "Our world-first Atlantis VR system creates an immersive and engaging environment to practice complex movements and tasks in a safe setting. Particularly effective for stroke recovery, traumatic brain injury (TBI), and balance disorders, it provides a powerful stimulus for the brain to create new pathways.", image: "/images/neuro.jpg" },
-          { title: "Exercise Physiology", body: "Specialised exercise programs that build physical strength and stimulate cognitive function, using the REAXING Lighting Wall and REAXING Treadmill to create reactive and dynamic challenges that improve reaction time, cognitive processing, and coordination.", image: "/images/tech-18.jpg" },
-          { title: "Psychology", body: "Essential support for memory impairment, emotional regulation, and adapting to changes in daily life. For ASD, help developing social skills and coping strategies; for stroke recovery and TBI, helping individuals and families navigate the psychological impact of the condition.", image: "/images/psychology.jpg" },
+          { title: "Physiotherapy", body: "Our physiotherapists are skilled in neurorehabilitation, designing programs to improve balance, coordination, gait, and motor control. For conditions like stroke recovery and multiple sclerosis (MS), they use specific exercises to retrain movement patterns and build strength.", image: "/images/aquatread-control-panel.jpg" },
+          { title: "Virtual Reality (VR) Therapy", body: "Our world-first Atlantis VR system creates an immersive and engaging environment to practice complex movements and tasks in a safe setting. Particularly effective for stroke recovery, traumatic brain injury (TBI), and balance disorders, it provides a powerful stimulus for the brain to create new pathways.", image: "/images/vr-headset.jpg" },
+          { title: "Exercise Physiology", body: "Specialised exercise programs that build physical strength and stimulate cognitive function, using the REAXING Lighting Wall and REAXING Treadmill to create reactive and dynamic challenges that improve reaction time, cognitive processing, and coordination.", image: "/images/reaxing-light-wall.jpg" },
+          { title: "Psychology", body: "Essential support for memory impairment, emotional regulation, and adapting to changes in daily life. For ASD, help developing social skills and coping strategies; for stroke recovery and TBI, helping individuals and families navigate the psychological impact of the condition.", image: "/images/helping-hand-silhouette.jpg" },
         ],
       },
       {
@@ -558,7 +558,7 @@ export const pages: SubPage[] = [
     eyebrow: "What we treat",
     headline: "Lifestyle conditions and proactive health.",
     sub: "Navigating the complexities of lifestyle conditions like obesity, cardiovascular issues, or diabetes can be a daunting challenge. At Atlantis Recovery Centre, we believe in a proactive and empowering approach to health.",
-    image: "/images/lifestyle-2.jpg",
+    image: "/images/gym-floor-session.jpg",
     chips: ["Personalised care", "Multidisciplinary", "Long-term success"],
     blocks: [
       {
@@ -569,7 +569,7 @@ export const pages: SubPage[] = [
           "Our mission is to help you manage these conditions, improve your overall well-being, and take control of your health journey. Located on the Gold Coast, our state-of-the-art facility combines expert care with innovative technology to provide you with a comprehensive plan for a healthier future.",
           "Our philosophy centers on personalised care and long-term success. We understand that lifestyle conditions are interconnected and require a multidisciplinary strategy. Our team of professionals, including Physiotherapists, Exercise Physiologists, and Psychologists, works together to create a customised program tailored to your specific needs and goals. We don't just treat the symptoms; we empower you with the knowledge, tools, and support you need to make lasting changes.",
         ],
-        image: "/images/about.jpg",
+        image: "/images/arc-dumbbells-closeup.jpg",
       },
       {
         type: "details",
@@ -584,17 +584,17 @@ export const pages: SubPage[] = [
           { title: "High Cholesterol", body: "We design exercise plans to improve your cholesterol profile and support a healthier lifestyle." },
           { title: "Pre- and Post-Natal Health", body: "We provide safe and effective programs to support women's health during and after pregnancy." },
         ],
-        image: "/images/with-dog.jpg",
+        image: "/images/staff-member-with-dog.jpg",
       },
       {
         type: "features",
         eyebrow: "Our specialised therapies for lifestyle management",
         heading: "Specialised therapies designed to address the unique challenges of lifestyle conditions.",
         items: [
-          { title: "Exercise Physiology", body: "A cornerstone of our approach, our Exercise Physiologists design safe and effective exercise programs to help you manage your condition, using cutting-edge technology like the Reaxing Lighting Wall and Reaxing Treadmill to make exercise engaging and to improve coordination and neurological function.", image: "/images/exercise-physiology.jpg" },
-          { title: "Hydrotherapy", body: "Our hydrotherapy services, including the revolutionary Hydro Tread underwater treadmill system, provide a low-impact environment for exercise. Especially beneficial for individuals with obesity or joint pain, it allows for pain-free movement, helping you build strength and endurance without stress on your joints.", image: "/images/tech-17.jpg" },
-          { title: "Physiotherapy", body: "Our physiotherapists play a crucial role in improving mobility and function, helping with any musculoskeletal issues that may be preventing you from being active. For chronic fatigue, they can create a graded exercise program that prevents overexertion and promotes gradual improvement.", image: "/images/chronic-pain.jpg" },
-          { title: "Psychology", body: "Managing a chronic lifestyle condition can take a toll on your mental health. Our psychologists provide support for depression, anxiety, and the stress associated with making significant lifestyle changes, helping you develop coping strategies and maintain motivation.", image: "/images/psychology.jpg" },
+          { title: "Exercise Physiology", body: "A cornerstone of our approach, our Exercise Physiologists design safe and effective exercise programs to help you manage your condition, using cutting-edge technology like the Reaxing Lighting Wall and Reaxing Treadmill to make exercise engaging and to improve coordination and neurological function.", image: "/images/reaxing-treadmill-closeup.jpg" },
+          { title: "Hydrotherapy", body: "Our hydrotherapy services, including the revolutionary Hydro Tread underwater treadmill system, provide a low-impact environment for exercise. Especially beneficial for individuals with obesity or joint pain, it allows for pain-free movement, helping you build strength and endurance without stress on your joints.", image: "/images/infrared-sauna.jpg" },
+          { title: "Physiotherapy", body: "Our physiotherapists play a crucial role in improving mobility and function, helping with any musculoskeletal issues that may be preventing you from being active. For chronic fatigue, they can create a graded exercise program that prevents overexertion and promotes gradual improvement.", image: "/images/aquatread-control-panel.jpg" },
+          { title: "Psychology", body: "Managing a chronic lifestyle condition can take a toll on your mental health. Our psychologists provide support for depression, anxiety, and the stress associated with making significant lifestyle changes, helping you develop coping strategies and maintain motivation.", image: "/images/helping-hand-silhouette.jpg" },
         ],
       },
       commitment,
@@ -607,7 +607,7 @@ export const pages: SubPage[] = [
     eyebrow: "6-week adult ADHD 1:1 treatment",
     headline: "Sync your mind & body: the ADHD Blueprint.",
     sub: "Our 6-week 1:1 programme in Bundall helps you stop fighting your biology and start syncing your mind and body using clinical psychology and vestibular neurology.",
-    image: "/images/reaxing.jpg",
+    image: "/images/reaxing-wall-in-use.jpg",
     chips: ["Adult ADHD", "1:1 sessions", "Medicare rebate may apply"],
     blocks: [
       {
@@ -618,16 +618,16 @@ export const pages: SubPage[] = [
           "We know the feeling of trying to 'will' yourself into focus while your nervous system feels like it's in overdrive. We've all been there. You buy the perfect planner, set the alarms, and commit to 'doing better', only to find your brain isn't ready to start.",
           "The truth is, focus isn't just a mental choice; it's a physical state. If your nervous system feels 'noisy' or unsettled, even the best tools in the world can't do their job. At Atlantis Recovery Centre, we don't just give you more 'hacks.' We use targeted movement to help your brain find its calm, focused centre so you can actually use the skills you already have.",
         ],
-        image: "/images/tech-18.jpg",
+        image: "/images/reaxing-light-wall.jpg",
       },
       {
         type: "features",
         eyebrow: "The blueprint",
         heading: "Three pillars, six weeks.",
         items: [
-          { title: "Trigger your brain's focus on-switch", body: "Move beyond the limits of willpower. We teach you targeted movement drills designed to trigger the dopamine and norepinephrine release your brain needs to naturally initiate tasks and overcome executive dysfunction.", image: "/images/tech-18.jpg" },
-          { title: "Physically ground your nervous system", body: "Access world-class reactive training equipment, including the REAXING treadmill and wall, to physically ground your nervous system. By stimulating your brain's balance centres, we stabilise attention at its biological source.", image: "/images/exercise-physiology.jpg" },
-          { title: "Action-orientated active psychology", body: "Skip the passive talk-therapy couch. Our 1:1 Activity-Based Psychotherapy (ABP) sessions are high-engagement and results-driven. You will train your executive functions and build real-world coping skills in real-time, moving through mental blocks rather than just talking about them.", image: "/images/reaxing-wall.jpg" },
+          { title: "Trigger your brain's focus on-switch", body: "Move beyond the limits of willpower. We teach you targeted movement drills designed to trigger the dopamine and norepinephrine release your brain needs to naturally initiate tasks and overcome executive dysfunction.", image: "/images/reaxing-light-wall.jpg" },
+          { title: "Physically ground your nervous system", body: "Access world-class reactive training equipment, including the REAXING treadmill and wall, to physically ground your nervous system. By stimulating your brain's balance centres, we stabilise attention at its biological source.", image: "/images/reaxing-treadmill-closeup.jpg" },
+          { title: "Action-orientated active psychology", body: "Skip the passive talk-therapy couch. Our 1:1 Activity-Based Psychotherapy (ABP) sessions are high-engagement and results-driven. You will train your executive functions and build real-world coping skills in real-time, moving through mental blocks rather than just talking about them.", image: "/images/reaxing-wall-clinician-client.jpg" },
         ],
       },
       {
@@ -641,7 +641,7 @@ export const pages: SubPage[] = [
         eyebrow: "Funding & rebates",
         heading: "Participants may be eligible for a Medicare rebate per session.",
         body: ["Contact us to discuss further information. Your circumstances may vary."],
-        image: "/images/team-sport.jpg",
+        image: "/images/team-sport-slogan.jpg",
         cta: { label: "Get started", href: "/contact" },
       },
       commitment,
@@ -654,7 +654,7 @@ export const pages: SubPage[] = [
     eyebrow: "ARC's technology",
     headline: "The latest in technology.",
     sub: "We are proud to carry some of the most advanced treatment technology in Australia. Full access to all of our leading technology comes as standard.",
-    image: "/images/tech-11.jpg",
+    image: "/images/dumbbell-rack.jpg",
     chips: ["Aquatread", "REAXING Light Wall", "REAXING Treadmill"],
     blocks: [
       technologyCards,
@@ -668,7 +668,7 @@ export const pages: SubPage[] = [
           "Alongside our Aquatread, REAXING Treadmill and Light Wall, Atlantis RC's technology suite complements our extensive range of services, including Physiotherapy, Psychology, Exercise Physiology and Hydrotherapy, ensuring you have access to a complete suite of advanced technologies unparalleled elsewhere in Australia.",
           "We strive to make our services accessible, working with various insurance providers to help ensure affordability and ease of access. Our commitment to providing progressive and effective treatments is backed by research and supported by government affiliations, including our collaborations with DVA and Bond University.",
         ],
-        image: "/images/tech-12.jpg",
+        image: "/images/cardio-deck.jpg",
       },
       commitment,
     ],
@@ -680,7 +680,7 @@ export const pages: SubPage[] = [
     eyebrow: "ARC's technology",
     headline: "Hydrotread: the future of aquatic rehabilitation.",
     sub: "A state-of-the-art, custom-made underwater treadmill that is truly unique in Australia, designed to accelerate your recovery, enhance your physical capabilities, and optimise your overall well-being.",
-    image: "/images/aquatred.jpg",
+    image: "/images/aquatread-session.jpg",
     chips: ["Unique in Australia", "Up to 80% less load", "15x resistance of air"],
     blocks: [
       {
@@ -691,7 +691,7 @@ export const pages: SubPage[] = [
           "At Atlantis RC, we are proud to feature the Aquatread, a state-of-the-art, custom-made underwater treadmill that is truly unique in Australia. This advanced hydrotherapy system is designed to accelerate your recovery, enhance your physical capabilities, and optimise your overall well-being, making it a cornerstone of our holistic approach to health.",
           "The Hydrotread harnesses the natural therapeutic properties of water (buoyancy, hydrostatic pressure, and resistance) to create an ideal environment for rehabilitation, conditioning, and performance enhancement.",
         ],
-        image: "/images/hydrotherapy.jpg",
+        image: "/images/aquatread-session.jpg",
       },
       {
         type: "details",
@@ -705,7 +705,7 @@ export const pages: SubPage[] = [
           { title: "Pain Relief and Muscle Relaxation", body: "Warm water therapy promotes muscle relaxation and increased blood flow, which naturally alleviates pain and stiffness. The soothing effects of water can also help reduce stress and anxiety, contributing to a more comfortable and effective recovery process." },
           { title: "Balance and Coordination Enhancement", body: "The unstable yet supportive environment of water requires your body to constantly make small adjustments to maintain stability. This helps improve proprioception, balance, and coordination, which are vital for preventing falls and improving functional mobility." },
         ],
-        image: "/images/tech-17.jpg",
+        image: "/images/infrared-sauna.jpg",
       },
       {
         type: "video",
@@ -721,7 +721,7 @@ export const pages: SubPage[] = [
           "Whether you are a professional athlete aiming for peak performance, an individual recovering from a physical injury, or someone managing a chronic condition or disability, the Hydrotread offers a versatile and effective solution. It allows for a natural gait pattern to occur, which is often difficult to achieve in a static pool, and supports activities from gentle walking to high-intensity training.",
           "At Atlantis RC, the Hydrotread is seamlessly integrated into our comprehensive Allied Health services, including Physiotherapy, Exercise Physiology, and other therapeutic modalities. Our expert team leverages this patented and proven technology, exclusive to our centre in Australia, to provide customised and progressive treatment plans that deliver powerful results.",
         ],
-        image: "/images/tech-14.jpg",
+        image: "/images/gym-floor.jpg",
         cta: { label: "Get in touch", href: "/contact" },
       },
       technologyCards,
@@ -735,7 +735,7 @@ export const pages: SubPage[] = [
     eyebrow: "ARC's technology",
     headline: "The REAXING Light Wall: elevating your performance and recovery.",
     sub: "An exclusive, state-of-the-art interactive training device designed to redefine your physical and cognitive capabilities through sudden, engaging visual stimulations.",
-    image: "/images/tech-18.jpg",
+    image: "/images/reaxing-light-wall.jpg",
     chips: ["Reactive training", "Hands and feet", "Exclusive to Atlantis RC"],
     blocks: [
       {
@@ -746,7 +746,7 @@ export const pages: SubPage[] = [
           "At Atlantis RC, we are proud to introduce the REAXING Light Wall, an exclusive, state-of-the-art interactive training device designed to redefine your physical and cognitive capabilities. This innovative technology is not just equipment; it's a dynamic training partner that pushes the boundaries of responsive ability through sudden, engaging visual stimulations.",
           "The REAXING Light Wall immerses you in a reactive environment that demands both physical agility and sharp mental focus. By engaging your hands and feet in quick, precise movements, it offers a multitude of benefits for athletes, individuals in rehabilitation, and anyone looking to enhance their overall performance.",
         ],
-        image: "/images/reaxing-wall.jpg",
+        image: "/images/reaxing-wall-clinician-client.jpg",
       },
       {
         type: "details",
@@ -759,7 +759,7 @@ export const pages: SubPage[] = [
           { title: "Higher Calorie Burn and Metabolic Activation", body: "The intensity and responsiveness demanded by the Lighting Wall elevate your heart rate and metabolic activity, making for an incredibly efficient workout that maximises calorie expenditure and boosts your overall fitness." },
           { title: "Superior Injury Recovery and Functional Re-education", body: "For those in rehabilitation, the Reaxing Lighting Wall provides a safe and effective platform for functional re-education. It helps restore neural pathways and movement patterns, improving stability, balance, and proprioception in a challenging yet controlled environment." },
         ],
-        image: "/images/reaxing.jpg",
+        image: "/images/reaxing-wall-in-use.jpg",
       },
       {
         type: "video",
@@ -775,7 +775,7 @@ export const pages: SubPage[] = [
           "The REAXING Light Wall is a key component of Atlantis RC's commitment to providing cutting-edge and holistic health solutions. It complements our extensive range of services, including Physiotherapy, Psychology, Exercise Physiology and Hydrotherapy. Alongside our Aquatread and REAXING Treadmill, the Light Wall ensures you have access to a complete suite of advanced technologies unparalleled elsewhere in Australia.",
           "Experience the thrill of reactive training and unlock new levels of performance and recovery with the REAXING Light Wall at Atlantis RC.",
         ],
-        image: "/images/tech-18.jpg",
+        image: "/images/reaxing-light-wall.jpg",
         cta: { label: "Get in touch", href: "/contact" },
       },
       technologyCards,
@@ -789,7 +789,7 @@ export const pages: SubPage[] = [
     eyebrow: "ARC's technology",
     headline: "Unpredictable training for unmatched results.",
     sub: "Our exclusive REAXING Treadmill redefines traditional treadmill training by introducing sudden and unpredictable inclinations in all directions.",
-    image: "/images/exercise-physiology.jpg",
+    image: "/images/reaxing-treadmill-closeup.jpg",
     chips: ["Dynamic terrain", "Cognitive agility", "DVA & Bond University"],
     blocks: [
       {
@@ -800,7 +800,7 @@ export const pages: SubPage[] = [
           "At Atlantis RC, we're dedicated to pushing the boundaries of recovery and performance, and our exclusive REAXING Treadmill is a testament to this commitment. This state-of-the-art equipment redefines traditional treadmill training by introducing sudden and unpredictable inclinations in all directions. It's not just a treadmill; it's an intelligent training platform that constantly challenges your body and mind, mimicking real-world dynamic interferences.",
           "The REAXING Treadmill provides a uniquely effective environment for both advanced training and functional rehabilitation. By introducing unexpected shifts in terrain, it forces your body to adapt and react instantaneously, leading to a host of profound benefits.",
         ],
-        image: "/images/gym-2.jpg",
+        image: "/images/reaxing-treadmill.jpg",
       },
       {
         type: "details",
@@ -814,7 +814,7 @@ export const pages: SubPage[] = [
           { title: "Superior Injury Recovery and Functional Re-education", body: "For those recovering from injury, the REAXING Treadmill offers a controlled yet challenging environment to rebuild strength, improve proprioception, and re-educate functional movement patterns, reducing the risk of re-injury." },
           { title: "Cognitive Agility", body: "Beyond the physical benefits, the REAXING Treadmill also sharpens cognitive functions, requiring constant mental focus and quick decision-making in response to the changing surface." },
         ],
-        image: "/images/gym-1.jpg",
+        image: "/images/reax-run-console.jpg",
       },
       {
         type: "split",
@@ -824,7 +824,7 @@ export const pages: SubPage[] = [
           "We strive to make our services accessible, working with various insurance providers to help ensure affordability and ease of access, with the potential for coverage by existing health care plans. Our commitment to providing progressive and effective treatments is backed by research and supported by government affiliations, including our collaborations with DVA and Bond University.",
           "The REAXING Treadmill is a vital component of Atlantis RC's cutting-edge technology suite. It complements our other advanced services, including Physiotherapy, Psychology, Exercise Physiology, Hydrotherapy (featuring our Aquatread), Virtual Reality with Atlantis VR, and Relaxation Massage. Together with the REAXING Lighting Wall, this technology empowers our expert team to deliver the most progressive and effective treatments available.",
         ],
-        image: "/images/tech-12.jpg",
+        image: "/images/cardio-deck.jpg",
         cta: { label: "Get in touch", href: "/contact" },
       },
       whoIsArcFor,
@@ -839,7 +839,7 @@ export const pages: SubPage[] = [
     eyebrow: "For referrers",
     headline: "Accepting referrals now.",
     sub: "Atlantis RC are welcoming patients now, with low wait times.",
-    image: "/images/about-bg.jpg",
+    image: "/images/treadmill-console.jpg",
     chips: ["Low wait times", "Fax 07 5609 6015", "One roof"],
     blocks: [
       {
@@ -851,7 +851,7 @@ export const pages: SubPage[] = [
           "We've developed a unique, purpose-built holistic health centre where physical rehabilitation and mental wellness seamlessly converge to deliver powerful and lasting results. You'll find all your Allied Health care needs conveniently located under one roof, supported by a world-class team and cutting-edge technology exclusive to Atlantis RC in Australia.",
           "Fax referrals to 07 5609 6015, email admin@atlantisrc.com.au, or call 07 5610 2312.",
         ],
-        image: "/images/team-sport.jpg",
+        image: "/images/team-sport-slogan.jpg",
         cta: { label: "Contact the team", href: "/contact" },
       },
       fundingList,
@@ -868,7 +868,7 @@ export const pages: SubPage[] = [
           { title: "Tom Hissey", body: "Senior Physiotherapist" },
           { title: "Lester Rafanan", body: "Physiotherapist" },
         ],
-        image: "/images/team-photo.jpg",
+        image: "/images/jade-evans-profile.jpg",
       },
     ],
   },

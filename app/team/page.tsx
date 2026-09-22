@@ -13,7 +13,7 @@ export default function Team() {
   return (
     <>
       <PhotoHero
-        image="/images/team-sport.jpg"
+        image="/images/team-sport-slogan.jpg"
         eyebrow="The team"
         title="Recovery is a team sport."
         sub="Real clinicians behind every plan. Psychologists, physiotherapists and exercise physiologists working as one."
@@ -38,7 +38,7 @@ export default function Team() {
       </section>
       <section className="p-3">
         <Reveal className="relative aspect-[16/9] md:aspect-[21/9] rounded-hero overflow-hidden">
-          <Image src="/images/team-photo.jpg" alt="The Atlantis Recovery Centre team" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/jade-evans-profile.jpg" alt="The Atlantis Recovery Centre team" fill sizes="100vw" className="object-cover" />
         </Reveal>
       </section>
       <CTA heading="Work with a team that moves with you." />
