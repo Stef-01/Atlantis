@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-white text-black font-sans text-base leading-relaxed; }
+  ::selection { background: #181818; color: #f4f4f3; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+}
+
+@layer components {
+  .container-l { @apply max-w-container mx-auto w-full; }
+  .pad-x { @apply px-4 sm:px-6 lg:px-11; }
+  .section { @apply py-20 md:py-28 lg:py-32; }
+
+  /* Everlab type scale */
+  .display { @apply font-display font-normal leading-[1] tracking-[-0.01em]; }
+  .h1 { @apply display text-[44px] sm:text-[56px] lg:text-[72px]; }
+  .h2 { @apply font-sans font-medium text-[28px] md:text-[32px] leading-[1.05] tracking-[-0.5px]; }
+  .h2-serif { @apply display text-[36px] md:text-[48px] lg:text-[56px]; }
+  .h3 { @apply font-sans font-medium text-[20px] md:text-[22px] leading-[1.2] tracking-[-0.3px]; }
+  .lead { @apply text-[17px] md:text-[18px] leading-[1.5] text-black/64; }
+  .eyebrow { @apply font-mono text-[13px] md:text-[14px] uppercase tracking-[0.02em] text-black/64; }
+  .stat { @apply display text-[40px] md:text-[48px] leading-none; }
+
+  /* Buttons: 50px pill, 54px tall, 16px/500 */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-pill h-[54px] px-[35px] text-[16px] font-medium leading-none whitespace-nowrap transition-all duration-300 ease-out border; }
+  .btn-black { @apply btn bg-black text-offwhite border-black hover:bg-neutral-darker hover:border-neutral-darker; }
+  .btn-white { @apply btn bg-white text-black border-white hover:bg-offwhite hover:border-offwhite; }
+  .btn-outline { @apply btn bg-transparent text-black border-black/10 hover:border-black; }
+  .btn-outline-light { @apply btn bg-transparent text-white border-white/24 hover:bg-white hover:text-black; }
+  .btn-nav { @apply inline-flex items-center justify-center rounded-nav h-11 px-5 text-[16px] font-medium leading-none transition-colors duration-300; }
+
+  .chip { @apply inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.02em] whitespace-nowrap; }
+  .pill { @apply inline-flex items-center rounded-pill border border-black/10 bg-white px-5 h-11 text-[15px] font-medium whitespace-nowrap; }
+
+  .card { @apply bg-offwhite rounded-card; }
+  .card-white { @apply bg-white rounded-card border border-black/[0.06]; }
+  .hairline { @apply border-t border-black/[0.08]; }
+
+  /* Reveal-on-scroll (mirrors Everlab's Webflow fade/lift interactions) */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.is-visible { opacity: 1; transform: none; }
+  .reveal-fade { opacity: 0; transition: opacity 1.2s ease; }
+  .reveal-fade.is-visible { opacity: 1; }
+
+  .marquee-mask { mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-fade { opacity: 1; transform: none; transition: none; }
+  .animate-marquee, .animate-marquee-fast, .animate-marquee-alt { animation: none; }
+}
