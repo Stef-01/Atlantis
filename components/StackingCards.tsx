@@ -12,12 +12,17 @@ export type StackCard = { step: string; title: string; body: string; points: str
 // Everlab's "feature-grid-new is-sticky" pattern: each card sticks at the top while the next one
 // slides over it; earlier cards scale down slightly via a scrubbed ScrollTrigger. Cards must stay
 // opaque: they are stuck on top of one another, so fading one shows the card beneath through it.
+// They only stack where a whole card fits below its sticky offset; on phones and short screens the
+// next card would cover the bottom of the current one before it was read, so there they are a plain
+// list. STACKS is repeated in the sticky class below (Tailwind needs the literal); keep them in step.
+const STACKS = "(min-width: 768px) and (min-height: 720px)";
+
 export default function StackingCards({ cards }: { cards: StackCard[] }) {
   const root = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const ctx = gsap.context(() => {
+    const mm = gsap.matchMedia();
+    mm.add(`${STACKS} and (prefers-reduced-motion: no-preference)`, () => {
       const items = gsap.utils.toArray<HTMLElement>(".stack-card");
       items.forEach((card, i) => {
         if (i === items.length - 1) return;
@@ -28,7 +33,7 @@ export default function StackingCards({ cards }: { cards: StackCard[] }) {
         });
       });
     }, root);
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   return (
@@ -36,7 +41,7 @@ export default function StackingCards({ cards }: { cards: StackCard[] }) {
       {cards.map((c, i) => (
         <article
           key={c.step}
-          className="stack-card sticky bg-offwhite rounded-card overflow-hidden grid md:grid-cols-2 min-h-[520px] md:min-h-[560px] origin-top will-change-transform"
+          className="stack-card [@media(min-width:768px)_and_(min-height:720px)]:sticky bg-offwhite rounded-card overflow-hidden grid md:grid-cols-2 min-h-[520px] md:min-h-[560px] origin-top will-change-transform"
           style={{ top: `calc(96px + ${i * 12}px)` }}
         >
           <div className="p-8 md:p-12 lg:p-14 flex flex-col justify-between">
