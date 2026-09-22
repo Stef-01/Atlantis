@@ -16,25 +16,25 @@ export const services = [
     slug: "physiotherapy",
     title: "Physiotherapy",
     blurb: "Hands-on treatment layered with hydrotherapy and advanced technology.",
-    image: "/images/aquatread-control-panel.jpg",
+    image: "/images/physio-gait-assessment.jpg",
   },
   {
     slug: "psychology",
     title: "Psychology",
     blurb: "A hybrid model that moves through problems, not just talks about them.",
-    image: "/images/helping-hand-silhouette.jpg",
+    image: "/images/psychology-session.jpg",
   },
   {
     slug: "exercise-physiology",
     title: "Exercise Physiology",
     blurb: "Restore strength, vitality and mood with evidence-based movement.",
-    image: "/images/reaxing-treadmill-closeup.jpg",
+    image: "/images/ep-session-synergy.jpg",
   },
   {
     slug: "hydrotherapy",
     title: "Hydrotherapy",
     blurb: "Australia's only Aquatread underwater treadmill, on site in Bundall.",
-    image: "/images/infrared-sauna.jpg",
+    image: "/images/aquatread-session-2.jpg",
   },
 ];
 

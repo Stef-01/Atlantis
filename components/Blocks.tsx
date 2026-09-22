@@ -43,7 +43,7 @@ export function FeaturesBlock({ b }: { b: Extract<Block, { type: "features" }> }
           {b.items.map((it, i) => (
             <Reveal key={it.title} delay={(i % 4) * 80} className="card-white overflow-hidden flex flex-col">
               <div className="relative aspect-[4/3] m-3 rounded-sm overflow-hidden">
-                <Image src={it.image ?? pool[i % pool.length]} alt="" fill sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" />
+                <Image src={it.image ?? pool[i % pool.length]} alt="" fill sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" className="object-cover" style={{ objectPosition: it.position }} />
                 <span className="absolute left-3 top-3 h-9 w-9 rounded-full bg-white text-black text-[13px] font-medium flex items-center justify-center">{String(i + 1).padStart(2, "0")}</span>
               </div>
               <div className="px-6 pb-7 pt-2">
@@ -129,7 +129,7 @@ export function CardsBlock({ b }: { b: Extract<Block, { type: "cards" }> }) {
             <Reveal key={it.href} delay={(i % 4) * 80}>
               <Link href={it.href} className="group block card overflow-hidden h-full text-black">
                 <div className="relative aspect-[4/3] m-3 rounded-sm overflow-hidden">
-                  <Image src={it.image} alt={it.title} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" />
+                  <Image src={it.image} alt={it.title} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" style={{ objectPosition: it.position }} />
                 </div>
                 <div className="px-6 pb-6 pt-2 flex flex-col gap-2">
                   <h3 className="h3 flex items-center justify-between gap-3">

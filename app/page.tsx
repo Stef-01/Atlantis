@@ -27,7 +27,7 @@ const steps = [
     title: "Meet your practitioner.",
     body: "A thorough assessment of your history, goals and current function, with complete body scans for precise, objective baselines.",
     points: ["Objective baselines from advanced technology", "A plan tailored to your condition, not a generic program", "Combined care where it helps"],
-    image: "/images/aquatread-control-panel.jpg",
+    image: "/images/reaxing-wall-clinician-client.jpg",
   },
   {
     step: "03 · Treat",
@@ -41,7 +41,7 @@ const steps = [
     title: "Progress, measured.",
     body: "Outcome-driven tracking so you can see real progress over time, with milestone updates and plans adjusted as your results come in.",
     points: ["Milestone body scans", "Plans adjusted as results come in", "Clear next steps at every stage"],
-    image: "/images/reaxing-light-wall.jpg",
+    image: "/images/aquatread-control-panel.jpg",
   },
 ];
 
