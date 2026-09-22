@@ -38,7 +38,7 @@ export default function Team() {
       </section>
       <section className="p-3">
         <Reveal className="relative aspect-[16/9] md:aspect-[21/9] rounded-hero overflow-hidden">
-          <Image src="/images/jade-evans-profile.jpg" alt="The Atlantis Recovery Centre team" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/psychology-session.jpg" alt="A clinician in session with a client at Atlantis Recovery Centre" fill sizes="100vw" className="object-cover" />
         </Reveal>
       </section>
       <CTA heading="Work with a team that moves with you." />
