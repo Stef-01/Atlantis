@@ -43,8 +43,8 @@ Vercel's preview deployments are not indexed by search engines, but a production
 ## Before going live
 
 - **Photo rights.** Every image in `public/images/` was downloaded from atlantisrc.com.au. Confirm Atlantis owns or licenses each one, and that anyone shown as a client in a session photo has agreed to appear on the site.
-- **Team headshots.** `public/images/team/` holds Atlantis's own profile photos from atlantisrc.com.au/team, cropped to 4:5. All eight share one backdrop and look AI-styled (Atlantis's media library also holds a `ChatGPT-Image` version of Bart's), so have each person confirm they're happy with their likeness. Lester Rafanan has no bio yet.
+- **Team headshots.** `public/images/team/` holds Atlantis's own profile photos from atlantisrc.com.au/team, cropped to 4:5. All eight share one backdrop and look AI-styled (Atlantis's media library also holds a `ChatGPT-Image` version of Bart's), so have each person confirm they're happy with their likeness.
 - **Yuri's surname.** Atlantis's team page says Dr Yuri Lima, but its Refer page and the file title of his photo say Yuri Lopez. This site follows the team page.
 - **"AHPRA registered" chip on `/team`.** Not everyone listed is AHPRA-registered: exercise physiologists are accredited through ESSA, and the list includes the operations lead. Reword the chip or narrow what it covers.
 - **Contact form.** `app/contact/page.tsx` posts to a `mailto:` address, which only works if the visitor has a mail app set up. Connect it to a real form endpoint.
-- **Contact details.** Confirm the phone, email, fax and address in `content/site.ts`.
+- **Contact details.** Confirm the phone, email, fax and address in `content/site.ts`. The contact block on atlantisrc.com.au shows info@atlantisrc.com.au, but this site uses admin@atlantisrc.com.au.

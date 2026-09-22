@@ -119,7 +119,9 @@ export const team = [
     name: "Lester Rafanan",
     role: "Physiotherapist",
     image: "/images/team/lester-rafanan.webp",
-    bio: [],
+    bio: [
+      "Lester Rafanan graduated with a Doctor of Physiotherapy from Bond University and has a background in personal training, strength and conditioning, and competitive sport, giving Lester a strong understanding of movement, performance, and injury prevention. He takes an evidence-based, personalised approach to physiotherapy, whether you're recovering from an injury or surgery, managing chronic pain, returning to sport, accessing NDIS supports, or simply wanting to stay active. Every treatment plan is tailored to your goals so you can move with confidence.",
+    ],
   },
   {
     name: "Michael Rehardt",
