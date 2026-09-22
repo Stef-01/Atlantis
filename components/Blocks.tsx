@@ -69,7 +69,7 @@ export function ListBlock({ b }: { b: Extract<Block, { type: "list" }> }) {
         </Reveal>
         <div className="grid gap-8 content-start">
           <Reveal delay={100} className="flex flex-wrap gap-3">
-            {b.items.map((it) => <span key={it} className="pill h-12 px-6 text-[16px]">{it}</span>)}
+            {b.items.map((it) => <span key={it} className="pill h-auto min-h-12 py-2.5 px-6 text-[16px] whitespace-normal">{it}</span>)}
           </Reveal>
           {b.image && (
             <Reveal delay={200} className="relative aspect-[16/10] rounded-card overflow-hidden">
@@ -127,7 +127,7 @@ export function CardsBlock({ b }: { b: Extract<Block, { type: "cards" }> }) {
         <div className={`mt-12 grid gap-4 ${cols}`}>
           {b.items.map((it, i) => (
             <Reveal key={it.href} delay={(i % 4) * 80}>
-              <Link href={it.href} className="group block card overflow-hidden h-full text-black">
+              <Link href={it.href} className="press group block card overflow-hidden h-full text-black">
                 <div className="relative aspect-[4/3] m-3 rounded-sm overflow-hidden">
                   <Image src={it.image} alt={it.title} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" style={{ objectPosition: it.position }} />
                 </div>

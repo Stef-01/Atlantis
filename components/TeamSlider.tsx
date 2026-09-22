@@ -25,7 +25,7 @@ export default function TeamSlider() {
           </div>
         </div>
       </div>
-      <div ref={track} className="mt-12 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-4 sm:px-6 lg:px-[max(44px,calc((100vw-1280px)/2))] pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div ref={track} tabIndex={0} role="region" aria-label="Team members" className="mt-12 flex gap-4 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scroll-smooth px-4 sm:px-6 lg:px-[max(44px,calc((100vw-1280px)/2))] scroll-pl-4 sm:scroll-pl-6 lg:scroll-pl-[max(44px,calc((100vw-1280px)/2))] pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black">
         {team.map((m) => (
           <article key={m.name} className="snap-start shrink-0 w-[280px] md:w-[320px] card overflow-hidden">
             <div className="relative aspect-[4/5] m-3 rounded-sm overflow-hidden">

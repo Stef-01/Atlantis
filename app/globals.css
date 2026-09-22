@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  html { -webkit-font-smoothing: antialiased; }
+  /* No grey flash on tap in iOS Safari: taps get the :active feedback below instead. "manipulation" keeps
+     pinch-zoom but drops double-tap-to-zoom, so controls respond to the first tap. */
+  html { -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
   body { @apply bg-white text-black font-sans text-base leading-relaxed; }
   ::selection { background: #181818; color: #f4f4f3; }
   h1, h2, h3, h4 { text-wrap: balance; }
+  /* Feedback on press, not release. Buttons and cards scale instead (see .btn and .press). */
+  a:not(.btn, .btn-nav, .press):active, button:not(.btn, .btn-nav):active { opacity: 0.6; }
 }
 
 @layer components {
@@ -24,13 +28,14 @@
   .eyebrow { @apply font-mono text-[13px] md:text-[14px] uppercase tracking-[0.02em] text-black/64; }
   .stat { @apply display text-[40px] md:text-[48px] leading-none; }
 
-  /* Buttons: 50px pill, 54px tall, 16px/500 */
-  .btn { @apply inline-flex items-center justify-center gap-2 rounded-pill h-[54px] px-[35px] text-[16px] font-medium leading-none whitespace-nowrap transition-all duration-300 ease-out border; }
+  /* Buttons: 50px pill, 54px tall, 16px/500. They dip quickly on press and ease back on release. */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-pill h-[54px] px-[35px] text-[16px] font-medium leading-none whitespace-nowrap transition-all duration-300 ease-out border active:scale-[0.97] active:duration-100; }
   .btn-black { @apply btn bg-black text-offwhite border-black hover:bg-neutral-darker hover:border-neutral-darker; }
   .btn-white { @apply btn bg-white text-black border-white hover:bg-offwhite hover:border-offwhite; }
   .btn-outline { @apply btn bg-transparent text-black border-black/10 hover:border-black; }
   .btn-outline-light { @apply btn bg-transparent text-white border-white/24 hover:bg-white hover:text-black; }
-  .btn-nav { @apply inline-flex items-center justify-center rounded-nav h-11 px-5 text-[16px] font-medium leading-none transition-colors duration-300; }
+  .btn-nav { @apply inline-flex items-center justify-center rounded-nav h-11 px-5 text-[16px] font-medium leading-none transition-all duration-300 active:scale-[0.97] active:duration-100; }
+  .press { @apply transition-transform duration-300 ease-out active:scale-[0.985] active:duration-100; }
 
   .chip { @apply inline-flex items-center gap-2 font-mono text-[13px] uppercase tracking-[0.02em] whitespace-nowrap; }
   .pill { @apply inline-flex items-center rounded-pill border border-black/10 bg-white px-5 h-11 text-[15px] font-medium whitespace-nowrap; }
@@ -39,16 +44,43 @@
   .card-white { @apply bg-white rounded-card border border-black/[0.06]; }
   .hairline { @apply border-t border-black/[0.08]; }
 
+  /* Brand teal. Wide-gamut (Display P3) screens, which every iPhone since the 7 has, get the same hue and
+     lightness with 27% more colour; sRGB screens keep the exact #60d0d8. Black text stays at 11.6:1. */
+  .nav-glass { background-color: rgb(96 208 216 / 0.92); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); }
+  .brand-teal { color: #60d0d8; }
+  @media (color-gamut: p3) {
+    .nav-glass { background-color: color(display-p3 0.4006 0.8216 0.8666 / 0.92); }
+    .brand-teal { color: color(display-p3 0.4006 0.8216 0.8666); }
+  }
+
   /* Reveal-on-scroll (mirrors Everlab's Webflow fade/lift interactions) */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
   .reveal.is-visible { opacity: 1; transform: none; }
   .reveal-fade { opacity: 0; transition: opacity 1.2s ease; }
   .reveal-fade.is-visible { opacity: 1; }
 
+  /* The same entrance for content that is on screen at load (the heroes), done in CSS so it starts at first
+     paint instead of waiting for JavaScript: on a slow phone connection the headline would otherwise stay blank. */
+  .rise { animation: rise 0.9s cubic-bezier(0.22,1,0.36,1) var(--rise-delay, 0ms) both; }
+  .rise-fade { animation: rise-fade 1.2s ease both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+  @keyframes rise-fade { from { opacity: 0; } }
+
   .marquee-mask { mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal-fade { opacity: 1; transform: none; transition: none; }
+  .rise, .rise-fade { animation: none; }
   .animate-marquee, .animate-marquee-fast, .animate-marquee-alt { animation: none; }
+}
+
+/* iOS Settings > Accessibility: Reduce Transparency makes the nav solid; Increase Contrast darkens the
+   softer greys. */
+@media (prefers-reduced-transparency: reduce) {
+  .nav-glass { background-color: #60d0d8; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-contrast: more) {
+  .lead, .eyebrow, .text-black\/64 { color: rgb(0 0 0 / 0.86); }
+  .text-white\/72, .text-white\/80 { color: rgb(255 255 255 / 0.94); }
 }

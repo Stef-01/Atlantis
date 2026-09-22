@@ -7,11 +7,12 @@ const stats = [
   { value: "1 of 1", label: "The only Aquatread underwater treadmill in Australia, on site in Bundall." },
 ];
 
-// Everlab's grey stats section is position:sticky so the next section slides over it.
+// Everlab's grey stats section holds (position: sticky) while the page scrolls on. Only where it fits on one
+// screen (the `stack` screen): on a phone it is taller than the display, so pinning it would hide its end.
 export default function StatsSticky() {
   return (
-    <div className="relative h-[170vh] md:h-[180vh]">
-      <section className="sticky top-0 min-h-screen bg-grey flex items-center">
+    <div className="relative stack:h-[180vh]">
+      <section className="stack:sticky top-0 stack:min-h-[100svh] bg-grey flex items-center">
         <div className="container-l pad-x py-24 w-full">
           <Reveal>
             <p className="eyebrow mb-4">Stats</p>

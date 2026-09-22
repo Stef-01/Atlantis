@@ -3,6 +3,8 @@ import type { Config } from "tailwindcss";
 // Everlab's extracted design tokens, applied 1:1.
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./content/**/*.{ts,tsx}"],
+  // Hover styles only where a real pointer hovers, so a tap on iPhone doesn't leave them stuck on.
+  future: { hoverOnlyWhenSupported: true },
   theme: {
     extend: {
       colors: {
@@ -39,6 +41,9 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       maxWidth: { container: "1280px", wide: "1400px" },
+      // Screens with room for pinned (sticky) sections: wide enough, and tall enough that a whole pinned panel
+      // fits. Phones and short laptop windows get the same content as plain, scrolling sections.
+      screens: { stack: { raw: "(min-width: 768px) and (min-height: 720px)" } },
       keyframes: {
         marquee: { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
         "marquee-alt": { "0%": { transform: "translateX(-50%)" }, "100%": { transform: "translateX(0)" } },

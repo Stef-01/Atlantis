@@ -14,6 +14,12 @@ const primary = [
   { label: "Refer", href: "/refer" },
 ];
 
+// The teal of .nav-glass (globals.css), for Safari's theme-color: Display P3 where the screen can show it.
+const TEAL = { srgb: "#60d0d8", p3: "color(display-p3 0.4006 0.8216 0.8666)" };
+
+// Menu rows are 44pt tall, Apple's minimum tap target.
+const menuLink = "flex min-h-11 items-center text-[15px] text-black/64";
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -30,16 +36,36 @@ export default function Nav() {
 
   const light = !scrolled && !open; // white text over the photo hero, black once scrolled
 
+  // Safari tints its bars with theme-color: white over the page top, teal while the teal bar is showing.
+  useEffect(() => {
+    const teal = window.matchMedia("(color-gamut: p3)").matches ? TEAL.p3 : TEAL.srgb;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", light ? "#ffffff" : teal);
+  }, [light]);
+
+  // While the menu is open the page behind it stays put, and Escape closes it.
+  useEffect(() => {
+    if (!open) return;
+    const root = document.documentElement;
+    const overflow = root.style.overflow;
+    root.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      root.style.overflow = overflow;
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
   return (
     <header
       className={`sticky top-0 z-50 transition-colors duration-500 ${
-        light ? "text-white" : "text-black bg-atlantis/95 backdrop-blur-md border-b border-black/10"
+        light ? "text-white" : "text-black nav-glass border-b border-black/10"
       }`}
     >
       <div className="max-w-wide mx-auto pl-6 pr-3 h-[74px] md:h-[86px] flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Atlantis Recovery Centre home">
+        <Link href="/" className="flex items-center gap-3 min-h-11" aria-label="Atlantis Recovery Centre home">
           <span className="relative h-10 w-10 md:h-11 md:w-11">
-            <Image src="/images/logo-emblem.png" alt="" fill sizes="44px" priority className="object-contain" />
+            <Image src="/images/logo-emblem.png" alt="" fill sizes="(min-width: 768px) 44px, 40px" priority className="object-contain" />
           </span>
           <span className="font-medium text-[17px] tracking-[-0.01em]">Atlantis RC</span>
         </Link>
@@ -59,21 +85,32 @@ export default function Nav() {
           </a>
         </div>
 
-        <button
-          className={`lg:hidden h-11 w-11 rounded-full flex items-center justify-center ${light ? "bg-white/10" : "bg-black/10"}`}
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          <span className="relative w-5 h-3 block">
-            <span className={`absolute left-0 top-0 h-[1.5px] w-5 bg-current transition-transform ${open ? "translate-y-[5.5px] rotate-45" : ""}`} />
-            <span className={`absolute left-0 bottom-0 h-[1.5px] w-5 bg-current transition-transform ${open ? "-translate-y-[5.5px] -rotate-45" : ""}`} />
-          </span>
-        </button>
+        {/* Phones: booking stays one tap away, next to the menu button. */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <a href={site.booking} target="_blank" rel="noreferrer" aria-label="Book a service" className={`btn-nav px-4 ${light ? "bg-white text-black" : "bg-black text-offwhite"}`}>
+            Book
+          </a>
+          <button
+            className={`h-11 w-11 rounded-full flex items-center justify-center ${light ? "bg-white/10" : "bg-black/10"}`}
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+          >
+            <span className="relative w-5 h-3 block">
+              <span className={`absolute left-0 top-0 h-[1.5px] w-5 bg-current transition-transform ${open ? "translate-y-[5.5px] rotate-45" : ""}`} />
+              <span className={`absolute left-0 bottom-0 h-[1.5px] w-5 bg-current transition-transform ${open ? "-translate-y-[5.5px] -rotate-45" : ""}`} />
+            </span>
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="lg:hidden bg-white text-black border-t border-black/[0.06] max-h-[calc(100vh-74px)] overflow-y-auto">
+        <div
+          id="mobile-menu"
+          className="lg:hidden bg-white text-black border-t border-black/[0.06] max-h-[calc(100dvh-74px)] overflow-y-auto overscroll-contain"
+          onClick={(e) => (e.target as HTMLElement).closest("a") && setOpen(false)}
+        >
           <div className="px-6 py-6 grid gap-8">
             <div className="grid gap-3">
               {primary.map((l) => (
@@ -83,19 +120,19 @@ export default function Nav() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div>
-                <p className="eyebrow mb-3">ARC's technology</p>
+                <p className="eyebrow mb-1">ARC's technology</p>
                 {technology.map((t) => (
-                  <Link key={t.slug} href={`/${t.slug}`} className="block py-1 text-[15px] text-black/64">{t.title}</Link>
+                  <Link key={t.slug} href={`/${t.slug}`} className={menuLink}>{t.title}</Link>
                 ))}
-                <p className="eyebrow mb-3 mt-6">Services</p>
+                <p className="eyebrow mb-1 mt-6">Services</p>
                 {services.map((s) => (
-                  <Link key={s.slug} href={`/${s.slug}`} className="block py-1 text-[15px] text-black/64">{s.title}</Link>
+                  <Link key={s.slug} href={`/${s.slug}`} className={menuLink}>{s.title}</Link>
                 ))}
               </div>
               <div>
-                <p className="eyebrow mb-3">What we treat</p>
+                <p className="eyebrow mb-1">What we treat</p>
                 {conditions.map((c) => (
-                  <Link key={c.slug} href={`/${c.slug}`} className="block py-1 text-[15px] text-black/64">{c.title}</Link>
+                  <Link key={c.slug} href={`/${c.slug}`} className={menuLink}>{c.title}</Link>
                 ))}
               </div>
             </div>

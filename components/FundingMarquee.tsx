@@ -8,7 +8,7 @@ export default function FundingMarquee({ label = "Funding accepted" }: { label?:
         <p className="eyebrow shrink-0">{label}</p>
         <Marquee gap="gap-12" className="flex-1">
           {funding.map((f) => (
-            <span key={f} className="text-[22px] md:text-[26px] font-medium tracking-[-0.5px] text-black/40 whitespace-nowrap">{f}</span>
+            <span key={f} className="text-[22px] md:text-[26px] font-medium tracking-[-0.5px] text-black/60 whitespace-nowrap">{f}</span>
           ))}
         </Marquee>
       </div>

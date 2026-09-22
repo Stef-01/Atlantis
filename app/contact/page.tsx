@@ -36,7 +36,7 @@ export default function Contact() {
               {details.map((d) => (
                 <div key={d.label} className="hairline pt-5">
                   <p className="eyebrow mb-2">{d.label}</p>
-                  {d.href ? <a href={d.href} className="text-[17px] font-medium hover:opacity-70">{d.value}</a> : <p className="text-[17px] font-medium">{d.value}</p>}
+                  {d.href ? <a href={d.href} className="inline-flex min-h-11 lg:min-h-0 items-center text-[17px] font-medium hover:opacity-70">{d.value}</a> : <p className="flex min-h-11 lg:min-h-0 items-center text-[17px] font-medium">{d.value}</p>}
                 </div>
               ))}
             </div>
@@ -47,23 +47,23 @@ export default function Contact() {
             <p className="text-[15px] text-black/64 mt-2">We'll be in touch within one business day.</p>
             <form className="mt-8 grid gap-4" action={`mailto:${site.email}`} method="post" encType="text/plain">
               <div className="grid sm:grid-cols-2 gap-4">
-                <Field label="Name" name="name" />
-                <Field label="Phone" name="phone" type="tel" />
+                <Field label="Name" name="name" autoComplete="name" />
+                <Field label="Phone" name="phone" type="tel" autoComplete="tel" />
               </div>
-              <Field label="Email" name="email" type="email" />
+              <Field label="Email" name="email" type="email" autoComplete="email" />
               <label className="grid gap-2 text-[14px] font-medium">
                 Service
-                <select name="service" className="h-12 rounded-sm border border-black/10 bg-white px-4 text-[15px] font-normal">
+                <select name="service" className="h-12 w-full min-w-0 rounded-sm border border-black/10 bg-white px-4 text-[16px] font-normal">
                   {services.map((s) => <option key={s.slug}>{s.title}</option>)}
                   <option>Not sure yet</option>
                 </select>
               </label>
               <label className="grid gap-2 text-[14px] font-medium">
                 How can we help?
-                <textarea name="message" rows={4} className="rounded-sm border border-black/10 bg-white px-4 py-3 text-[15px] font-normal" />
+                <textarea name="message" rows={4} className="w-full min-w-0 rounded-sm border border-black/10 bg-white px-4 py-3 text-[16px] font-normal" />
               </label>
               <button type="submit" className="btn-black mt-2 w-full sm:w-auto">Send request</button>
-              <p className="text-[12px] text-black/48">By submitting you agree to be contacted by Atlantis RC about your enquiry.</p>
+              <p className="text-[13px] text-black/64">By submitting you agree to be contacted by Atlantis RC about your enquiry.</p>
             </form>
           </Reveal>
         </div>
@@ -82,11 +82,12 @@ export default function Contact() {
   );
 }
 
-function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
+// 16px text: iOS Safari zooms the page into any field smaller than that when it is tapped.
+function Field({ label, name, type = "text", autoComplete }: { label: string; name: string; type?: string; autoComplete?: string }) {
   return (
     <label className="grid gap-2 text-[14px] font-medium">
       {label}
-      <input name={name} type={type} required className="h-12 rounded-sm border border-black/10 bg-white px-4 text-[15px] font-normal" />
+      <input name={name} type={type} autoComplete={autoComplete} required className="h-12 w-full min-w-0 rounded-sm border border-black/10 bg-white px-4 text-[16px] font-normal" />
     </label>
   );
 }
