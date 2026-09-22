@@ -19,7 +19,7 @@ Opens at http://localhost:3000. For a production build, run `npm run build`, the
 
 | Path | What it holds |
 | --- | --- |
-| `content/site.ts` | Contact details, booking link, funding types, services, conditions, team bios, testimonials, FAQs |
+| `content/site.ts` | Contact details, booking link, funding types, services, conditions, team bios, FAQs |
 | `content/pages.ts` | Every sub-page (About, Services, each service, condition and technology page, Refer), written as a list of blocks |
 | `app/page.tsx` | Home page |
 | `app/[slug]/page.tsx` | Renders each entry in `content/pages.ts` at `/<slug>` |
@@ -42,7 +42,6 @@ Vercel's preview deployments are not indexed by search engines, but a production
 
 ## Before going live
 
-- **Testimonials are placeholders.** The two quotes in `content/site.ts` are signed "Sample patient", but the section intro in `components/Testimonials.tsx` says "Real stories from people…". Remove the section or replace it with reviews that stay off clinical ground. Section 133 of the National Law bans testimonials, including made-up ones, that mention symptoms, treatment or outcomes, and both placeholders do. Comments about service, such as wait times or how staff communicate, are allowed.
 - **Photo rights.** Every image in `public/images/` was downloaded from atlantisrc.com.au. Confirm Atlantis owns or licenses each one.
 - **Team photos.** The `/team` page and the home slider use facility photos in place of headshots (`team[].image`), and Lester Rafanan has no bio yet.
 - **"AHPRA registered" chip on `/team`.** Not everyone listed is AHPRA-registered: exercise physiologists are accredited through ESSA, and the list includes the operations lead. Reword the chip or narrow what it covers.

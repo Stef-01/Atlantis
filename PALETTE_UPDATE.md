@@ -44,7 +44,6 @@ All images in `public/images/` were downloaded from atlantisrc.com.au (wp-conten
 Confirm Atlantis owns/licenses each photo before going live. `logo-mark.png` is the ARC mark.
 
 ## Still to do before shipping
-- Replace placeholder testimonials with real, consented patient reviews (AHPRA).
 - Team portraits: current images are facility photos as stand-ins; swap for real headshots.
 - Wire the contact form to a real endpoint (currently a mailto fallback).
 - Confirm phone, email, fax and address.

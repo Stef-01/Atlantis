@@ -130,23 +130,6 @@ export const team = [
   },
 ];
 
-export const testimonials = [
-  {
-    headline: "“I finally felt like the plan made sense.”",
-    quote:
-      "The team took the time to understand my whole situation, not just the injury. Physio and psychology in the same building meant nothing fell through the cracks.",
-    name: "Sample patient",
-    meta: "Physiotherapy & psychology",
-  },
-  {
-    headline: "“It wasn't guesswork session to session.”",
-    quote:
-      "I could see my progress being tracked properly. The hydrotherapy treadmill let me move again weeks before I expected to, and the plan changed as my results came in.",
-    name: "Sample patient",
-    meta: "Hydrotherapy & exercise physiology",
-  },
-];
-
 export const faqs = [
   {
     q: "Do I need a doctor's referral?",

@@ -7,7 +7,6 @@ import StatsSticky from "@/components/StatsSticky";
 import StackingCards from "@/components/StackingCards";
 import TextureBand from "@/components/TextureBand";
 import TeamSlider from "@/components/TeamSlider";
-import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
@@ -126,7 +125,6 @@ export default function Home() {
 
         <CardsBlock b={technologyCards} />
         <TeamSlider />
-        <Testimonials />
         <FAQ />
         <CTA />
       </div>
