@@ -10,7 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 export type StackCard = { step: string; title: string; body: string; points: string[]; image: string };
 
 // Everlab's "feature-grid-new is-sticky" pattern: each card sticks at the top while the next one
-// slides over it; earlier cards scale down slightly via a scrubbed ScrollTrigger.
+// slides over it; earlier cards scale down slightly via a scrubbed ScrollTrigger. Cards must stay
+// opaque: they are stuck on top of one another, so fading one shows the card beneath through it.
 export default function StackingCards({ cards }: { cards: StackCard[] }) {
   const root = useRef<HTMLDivElement>(null);
 
@@ -22,7 +23,6 @@ export default function StackingCards({ cards }: { cards: StackCard[] }) {
         if (i === items.length - 1) return;
         gsap.to(card, {
           scale: 0.94,
-          opacity: 0.6,
           ease: "none",
           scrollTrigger: { trigger: items[i + 1], start: "top bottom", end: "top top+=96", scrub: true },
         });
