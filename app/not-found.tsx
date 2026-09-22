@@ -1,13 +1,6 @@
-import Link from "next/link";
+import PhotoHero from "@/components/PhotoHero";
 
+// The nav is white text until you scroll, so every page opens on a dark photo hero; without one it is invisible here.
 export default function NotFound() {
-  return (
-    <section className="section min-h-[60vh] flex items-center">
-      <div className="container-l pad-x text-center">
-        <p className="eyebrow mb-4">404</p>
-        <h1 className="h2-serif">That page isn't here.</h1>
-        <Link href="/" className="btn-black mt-8">Back to home</Link>
-      </div>
-    </section>
-  );
+  return <PhotoHero image="/images/ocean.jpg" eyebrow="404" title="That page isn't here." primary={{ label: "Back to home", href: "/" }} />;
 }
